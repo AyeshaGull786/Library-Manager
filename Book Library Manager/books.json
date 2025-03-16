@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "year": 2018,
+        "genre": "Self-Help",
+        "status": "Reading",
+        "progress": 60
+    },
+    {
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "year": 2011,
+        "genre": "History",
+        "status": "Wishlist",
+        "progress": 0
+    },
+    {
+        "title": "my self",
+        "author": "ayesha",
+        "year": 2023,
+        "genre": "descriptive",
+        "status": "R",
+        "progress": 12
+    },
+    {
+        "title": "Dark ages",
+        "author": "Mifdre",
+        "year": 1999,
+        "genre": "Horror",
+        "status": "W",
+        "progress": 34
+    },
+    {
+        "title": "My day",
+        "author": "Antonie",
+        "year": 2023,
+        "genre": "Suspense",
+        "status": "Reading",
+        "progress": 20
+    }
+]
