@@ -31,7 +31,7 @@ st.markdown("""
     }
     </style>
     <div class="title-box">
-        📚 Eterna Library <br>
+        📚 Eternal Library <br>
         <span class="subtitle">Your timeless personal books collection</span>
     </div>
 """, unsafe_allow_html=True)
