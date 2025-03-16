@@ -48,7 +48,8 @@ class PersonalLibraryManager:
 
         self.library.append(book)
         self.save_library()
-        print(f"\033[92m'{title}' added to the library!\033[0m")
+        print(f"'{title}' added to the library!")
+
 
     def remove_book(self):
         title = input("Enter the title of the book to remove: ").strip()
@@ -56,33 +57,33 @@ class PersonalLibraryManager:
             if book["title"].lower() == title.lower():
                 self.library.remove(book)
                 self.save_library()
-                print(f"\033[91m'{title}' removed from the library.\033[0m")
+                print(f"'{title}' removed from the library.")
                 return
-        print("\033[93mBook not found!\033[0m")
+        print("Book not found!")
 
     def search_book(self):
         query = input("Enter book title or author to search: ").strip().lower()
         results = [book for book in self.library if query in book["title"].lower() or query in book["author"].lower()]
         if results:
-            print("\n\033[96mSearch Results:\033[0m")
+            print("Search Results:")
             for book in results:
                 self.display_book(book)
         else:
-            print("\033[93mNo matching books found.\033[0m")
+            print("No matching books found.")
 
     def display_all_books(self):
         if not self.library:
-            print("\033[93mNo books in the library.\033[0m")
+            print("No books in the library.")
             return
-        print("\n\033[94mLibrary Collection:\033[0m")
+        print("Library Collection:")
         for book in self.library:
             self.display_book(book)
 
     def display_book(self, book):
         status_color = {
-            "Completed": "\033[92mCompleted\033[0m",
-            "Reading": "\033[93mReading\033[0m",
-            "Wishlist": "\033[91mWishlist\033[0m"
+            "Completed": "Completed",
+            "Reading": "Reading",
+            "Wishlist": "Wishlist"
         }
         print(f"\033[95mTitle:\033[0m {book['title']} | "
               f"\033[95mAuthor:\033[0m {book['author']} | "
@@ -94,17 +95,17 @@ class PersonalLibraryManager:
     def display_statistics(self):
         total_books = len(self.library)
         if total_books == 0:
-            print("\033[93mNo books in the library to show statistics.\033[0m")
+            print("No books in the library to show statistics.")
             return
 
         completed_books = sum(1 for book in self.library if book["status"] == "Completed")
         reading_books = sum(1 for book in self.library if book["status"] == "Reading")
         wishlist_books = sum(1 for book in self.library if book["status"] == "Wishlist")
 
-        print(f"\n\033[96mTotal Books:\033[0m {total_books}")
-        print(f"\033[92mCompleted Books:\033[0m {completed_books}")
-        print(f"\033[93mCurrently Reading:\033[0m {reading_books}")
-        print(f"\033[91mWishlist:\033[0m {wishlist_books}")
+        print(f"Total Books: {total_books}")
+        print(f"Completed Books: {completed_books}")
+        print(f"Currently Reading:{reading_books}")
+        print(f"Wishlist:{wishlist_books}")
 
     def menu(self):
         while True:
@@ -116,7 +117,7 @@ class PersonalLibraryManager:
             print("4. Display All Books")
             print("5. Display Statistics")
             print("6. Exit")
-            choice = input("\033[96mEnter your choice:\033[0m ").strip()
+            choice = input("Enter your choice: ").strip()
 
             if choice == "1":
                 self.add_book()
@@ -129,10 +130,10 @@ class PersonalLibraryManager:
             elif choice == "5":
                 self.display_statistics()
             elif choice == "6":
-                print("\033[92mExiting... Happy Reading!\033[0m")
+                print("Exiting... Happy Reading!")
                 break
             else:
-                print("\033[91mInvalid choice! Please try again.\033[0m")
+                print("Invalid choice! Please try again.")
 
 if __name__ == "__main__":
     PersonalLibraryManager().menu()
