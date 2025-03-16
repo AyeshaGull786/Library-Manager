@@ -108,7 +108,8 @@ class PersonalLibraryManager:
 
     def menu(self):
         while True:
-            print("\n\033[94mPersonal Library Manager\033[0m")
+            print("Personal Library Manager")
+
             print("1. Add a Book")
             print("2. Remove a Book")
             print("3. Search for a Book")
