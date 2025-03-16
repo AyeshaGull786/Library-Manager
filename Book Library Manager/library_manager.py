@@ -85,12 +85,12 @@ class PersonalLibraryManager:
             "Reading": "Reading",
             "Wishlist": "Wishlist"
         }
-        print(f"\033[95mTitle:\033[0m {book['title']} | "
-              f"\033[95mAuthor:\033[0m {book['author']} | "
-              f"\033[95mYear:\033[0m {book['year']} | "
-              f"\033[95mGenre:\033[0m {book['genre']} | "
-              f"\033[95mStatus:\033[0m {status_color.get(book['status'], book['status'])} | "
-              f"\033[95mProgress:\033[0m {book['progress']}%")
+        print(f"Title: {book['title']} | "
+              f"Author: {book['author']} | "
+              f"Year: {book['year']} | "
+              f"Genre: {book['genre']} | "
+              f"Status: {status_color.get(book['status'], book['status'])} | "
+              f"Progress: {book['progress']}%")
 
     def display_statistics(self):
         total_books = len(self.library)
